@@ -1,42 +1,50 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
+let Buttons = () => {
+  const [count, setCount] = useState(0);
 
-let Button =()=>{
-  <header className="App-header">
-  <img src={logo} className="App-logo" alt="logo" />
-  <p>
-    Edit <code>src/App.js</code> and save to reload.
-  </p>
-  <a
-    className="App-link"
-    href="https://reactjs.org"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Learn React
-  </a>
-</header>
-    const [count, setCount] = useState(0);
-  
-    function handleClick() {
-      setCount(count + 1);
+  function incrementarClick() {
+    setCount(count + 1);
+  }
+  function decrementarClick() {
+    if(count>0){
+      setCount(count - 1);
     }
-  
-    return (
-      <button onClick={handleClick}>
-        Hiciste clic {count} veces
-      </button>
-    );
-  
+    else{
+      setCount(0)
+    }
+   
+  }
+  function resetClick() {
+    setCount(0);
+  }
+
+  return (
+    <>
+      <div className='contador'>
+        <p>{count}</p> 
+      </div>
+
+      <div className='botones'>
+        <button onClick={incrementarClick}>
+          Aumentar
+        </button>
+        <button onClick={decrementarClick}>
+          Decrementar
+        </button>
+        <button onClick={resetClick}>
+          Restablecer
+        </button>
+      </div>
+    </>
+  );
 }
 
 function App() {
   return (
     <div className="App">
-      <Button></Button>
-
+      <Buttons />
     </div>
   );
 }
