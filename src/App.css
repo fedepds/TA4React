@@ -13,7 +13,7 @@
 }
 
 .botones button {
-  background-color: #F08626; /* Color que habías mencionado previamente */
+  background-color: #F08626; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -25,12 +25,12 @@
 }
 
 .botones button:hover {
-  background-color: #d46e1f; /* Un tono más oscuro del color principal */
-  transform: scale(1.05); /* Pequeña animación al pasar el ratón */
+  background-color: #d46e1f; 
+  transform: scale(1.05); 
 }
 
 .botones button:active {
-  transform: scale(0.95); /* Efecto al hacer clic */
+  transform: scale(0.95); 
 }
 
 .botones {
