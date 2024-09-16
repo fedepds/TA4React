@@ -5,11 +5,11 @@ let Buttons = () => {
   const [count, setCount] = useState(0);
 
   function incrementarClick() {
-    setCount(count + 1);
+    setCount((prevValue)=>prevValue + 1);
   }
   function decrementarClick() {
     if(count>0){
-      setCount(count - 1);
+      setCount((prevValue)=>prevValue -1);
     }
     else{
       setCount(0)
